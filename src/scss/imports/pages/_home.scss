@@ -1,0 +1,172 @@
+/** @format */
+
+// CSS HOMEPAGE
+.hero {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  .hero__wrapper {
+    height: 100%;
+    width: 100%;
+    &-item {
+      height: 100%;
+      width: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        object-fit: cover;
+      }
+    }
+  }
+  .hero__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.welcome {
+  .container {
+    .wrapper {
+      padding: 5em 0;
+      .welcome__title {
+        margin-bottom: 0.3em;
+        font-size: 4rem;
+        font-family: "Italiana", serif;
+      }
+      .welcome__content {
+        font-family: "Karla", sans-serif;
+      }
+    }
+  }
+}
+
+.story {
+  background: $text-yellow-cl;
+
+  .container {
+    display: flex;
+    padding: 5em 0;
+    .story__image {
+      flex: 50%;
+      margin-right: 2em;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+      }
+    }
+    .story__content {
+      flex: 50%;
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      &-title {
+        font-family: "Italiana", serif;
+        font-size: 3rem;
+        color: $text-black-cl;
+      }
+      &-description {
+        margin: 0.5em 0;
+
+        font-family: "Karla", sans-serif;
+
+        color: $text-black-cl;
+      }
+      span {
+        height: 100%;
+
+        padding: 0.7em 0;
+        margin-top: 1em;
+
+        .story__content-button {
+          padding: 0.7em;
+          flex: 50%;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+.service {
+  margin: 8em 0;
+  .container {
+    .service__title {
+      text-align: center;
+    }
+    .service__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10em;
+        li {
+          margin: 2em 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          span {
+            width: 10em;
+            height: 10em;
+            cursor: pointer;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          p {
+            margin-top: 2em;
+            position: relative;
+            &::before {
+              display: none;
+              content: "";
+              position: absolute;
+              background: $black-bg-cl;
+              width: 100%;
+              height: 0.05em;
+              bottom: -0.2em;
+            }
+          }
+          .active {
+            &::before {
+              display: block;
+            }
+          }
+        }
+      }
+      &-info {
+        text-align: center;
+        .info {
+          display: none;
+        }
+        .active {
+          display: block;
+        }
+      }
+
+      span {
+        margin-top: 3em;
+        padding: 0.7em 0;
+        .service__wrapper-button {
+          padding: 0.7em;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  background-image: url("../../src/assets/uni-holder.png");
+  height: 22em;
+}

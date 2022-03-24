@@ -1,0 +1,19 @@
+/** @format */
+
+// css button, title, icon, elements...
+img {
+  max-width: 100%;
+}
+
+.button {
+  border: $black-cl 0.1em solid;
+  text-transform: uppercase;
+  font-family: "Karla", sans-serif;
+  font-size: 0.8rem;
+
+  letter-spacing: 0.05em;
+  &:hover {
+    background: $black-cl;
+    color: $text-white-cl;
+  }
+}

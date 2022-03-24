@@ -1,0 +1,63 @@
+/** @format */
+
+// css header
+header {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  z-index: 10;
+  .container-fluid {
+    width: 100%;
+    overflow: hidden;
+    .nav__main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .menu {
+        display: flex;
+
+        li {
+          position: relative;
+          margin: 0 2em;
+
+          a {
+            text-align: center;
+            color: $text-white-cl;
+            text-decoration: none;
+            font-family: "Karla", sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            &:hover {
+              color: $text-yellow-cl;
+
+              &::before {
+                display: block;
+                background: $text-yellow-cl;
+              }
+            }
+            &::before {
+              display: none;
+              content: "";
+              width: 97%;
+              height: 0.1em;
+              position: absolute;
+              bottom: -0.2em;
+              background: $white-cl;
+            }
+          }
+        }
+      }
+      .logo {
+        img {
+          width: 15em;
+        }
+      }
+    }
+
+    .nav__mobile {
+      display: none;
+    }
+  }
+}

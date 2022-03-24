@@ -1,0 +1,82 @@
+/** @format */
+
+// css footer
+footer {
+  background: $text-black-cl;
+  display: flex;
+  flex-direction: column;
+  .were {
+    width: 100%;
+    padding: 4em;
+    .footer {
+      display: flex;
+      color: $text-white-cl;
+      justify-content: space-between;
+      &__item {
+        display: flex;
+        flex-direction: column;
+
+        .title {
+          margin-bottom: 2em;
+          text-align: center;
+          span {
+            font-family: "Karla", sans-serif;
+            font-weight: 300;
+            text-align: center;
+            text-transform: uppercase;
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 0.2em;
+              background: $text-yellow-cl;
+              bottom: -1em;
+              left: 0;
+            }
+          }
+        }
+        .links {
+          .wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.4em;
+            a {
+              color: $text-white-cl;
+              display: flex;
+              gap: 0.5em;
+
+              img {
+                width: 1em;
+                color: white;
+              }
+            }
+          }
+        }
+        .button {
+          text-align: center;
+          padding: 1em;
+        }
+      }
+    }
+  }
+  .secondary {
+    background: $black-bg-cl;
+    text-align: center;
+    color: $text-white-cl;
+    padding: 1em;
+    span {
+      color: $text-yellow-cl;
+    }
+  }
+}
+.white {
+  border: $white-cl 0.1em solid;
+  color: white;
+  &:hover {
+    background-color: white;
+    color: $black-bg-cl;
+  }
+}
