@@ -15,6 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Italiana&family=Karla:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+    ></script>
   </head>
   <body>
     <header>
@@ -50,16 +54,19 @@
     <main class="mainwrapper">
       <section class="hero">
         <div class="hero__wrapper">
-          <div class="hero__wrapper-item active">
-            <img src="./src/assets/uni-hero1.jpg" alt="UNI HERO IMAGE" />
+          <div class="hero__wrapper-item">
+            <img
+              data-flickity-lazyload="./src/assets/uni-hero1.jpg"
+              alt="UNI HERO IMAGE"
+            />
+          </div>
+          <div class="hero__wrapper-item">
+            <img data-flickity-lazyload="./src/assets/uni-hero2.jpg" alt="" />
+          </div>
+          <div class="hero__wrapper-item">
+            <img data-flickity-lazyload="./src/assets/uni-hero3.jpg" alt="" />
           </div>
           <!-- <div class="hero__wrapper-item">
-            <img src="./src/assets/" alt="" />
-          </div>
-          <div class="hero__wrapper-item">
-            <img src="./src/assets/" alt="" />
-          </div>
-          <div class="hero__wrapper-item">
             <img src="./src/assets/" alt="" />
           </div>
           <div class="hero__wrapper-item">
@@ -67,12 +74,12 @@
           </div> -->
         </div>
         <div class="hero__button">
-          <a href="">
-            <img src="./src/assets/" alt="" />
+          <a href="#welcome">
+            <img src="./src/assets/uni-arrow.png" alt="" />
           </a>
         </div>
       </section>
-      <section class="welcome">
+      <section class="welcome" id="welcome">
         <div class="container">
           <div class="wrapper">
             <h1 class="welcome__title">Welcome</h1>
@@ -114,19 +121,19 @@
           <h2 class="service__title">Service</h2>
           <div class="service__wrapper">
             <ul class="service__wrapper-item">
-              <li>
+              <li class="card">
                 <span data-id="1" class="Icon"
                   ><img src="./src/assets/uni-holder.png" alt=""
                 /></span>
                 <p class="active">Nail Art</p>
               </li>
-              <li>
+              <li class="card">
                 <span data-id="2" class="Icon"
                   ><img src="./src/assets/uni-holder.png" alt=""
                 /></span>
                 <p>Waxing</p>
               </li>
-              <li>
+              <li class="card">
                 <span data-id="3" class="Icon"
                   ><img src="./src/assets/uni-holder.png" alt=""
                 /></span>
@@ -242,5 +249,7 @@
         </div>
       </div>
     </footer>
+    <script src="src/js/lib/flickity.pkgd.min.js"></script>
+    <script src="src/js/index.js"></script>
   </body>
 </html>
