@@ -35,16 +35,27 @@ module.exports = {
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
+          'postcss-loader',
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
           {
             // After all CSS loaders, we use a plugin to do its work.
             // It gets all transformed CSS and extracts it into separate
             // single bundled file
             loader: MiniCssExtractPlugin.loader
           },
-          {
-            loader: "css-loader",
-          },
-          /* ... Other loaders ... */
+
         ]
       }
     ]
