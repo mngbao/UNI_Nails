@@ -402,16 +402,6 @@ footer {
       width: 3em;
       animation: down 3s infinite; }
 
-@keyframes down {
-  0% {
-    transform: tranlateY(0);
-    opacity: 0.02; }
-  50% {
-    transform: translateY(1em);
-    opacity: 0.8; }
-  100% {
-    transform: translateY(0em);
-    opacity: 0.05; } }
 .welcome {
   background: #2b2b28;
   color: #fff; }

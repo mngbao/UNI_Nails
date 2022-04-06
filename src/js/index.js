@@ -6,7 +6,6 @@ function flickity() {
     contain: true,
     autoPlay: 4000,
     pauseAutoPlayOnHover: false,
-    lazyLoad: 2,
     selectedAttraction: 0.01,
     friction: 0.15
   });
@@ -50,8 +49,12 @@ function scrollToWelcome() {
 
   })
 }
+window.addEventListener('load', (event) => {
+  console.log('page is fully loaded');
+});
 
 $(function () {
+
 
   flickity();
   ServiceCard();
