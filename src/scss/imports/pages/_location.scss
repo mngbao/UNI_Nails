@@ -1,0 +1,172 @@
+/** @format */
+
+#contact {
+  .parallax {
+    background-image: url("../../src/assets/uni-holder.png");
+  }
+
+  .info {
+    padding: 4em 0;
+    margin: 4em;
+  }
+}
+
+.form {
+  #container {
+    max-width: 768px;
+    margin: 60px auto;
+    position: relative;
+    h2 {
+      color: $text-black-cl;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 7px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    form {
+      padding: 37.5px;
+      margin: 50px 0;
+      .email {
+        float: right;
+        width: 45%;
+      }
+
+      input[type="text"],
+      [type="email"],
+      textarea {
+        background: none;
+        border: none;
+        border-bottom: solid 1.5px $text-black-cl;
+        color: $text-black-cl;
+        font-size: 1em;
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin: 0em 0 1.875em 0;
+        font-family: "Karla", sans-serif;
+
+        padding: 0 0 0.875em 0;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+
+      input[type="text"]:focus,
+      [type="email"]:focus,
+      textarea:focus {
+        outline: none;
+        padding: 0 0 0.875em 0;
+      }
+
+      .message {
+        float: none;
+      }
+
+      .name {
+        float: left;
+        width: 45%;
+      }
+
+      .subject {
+        width: 100%;
+      }
+
+      textarea {
+        line-height: 150%;
+        height: 150px;
+        resize: none;
+        width: 100%;
+        font-family: "Karla", sans-serif;
+      }
+
+      ::-webkit-input-placeholder {
+        color: $text-black-cl;
+      }
+
+      :-moz-placeholder {
+        color: $text-black-cl;
+        opacity: 1;
+      }
+
+      ::-moz-placeholder {
+        color: $text-black-cl;
+        opacity: 1;
+      }
+
+      :-ms-input-placeholder {
+        color: $text-black-cl;
+      }
+
+      #form_button {
+        border: $text-black-cl 0.1em solid;
+        text-transform: uppercase;
+        background: none;
+        font-family: "Karla", sans-serif;
+        font-size: 1rem;
+        cursor: pointer;
+        letter-spacing: 0.05em;
+        padding: 1em;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        &:hover {
+          background: $text-black-cl;
+          color: $text-white-cl;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #container {
+    margin: 20px auto;
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 26px;
+  }
+
+  .underline {
+    width: 68px;
+  }
+
+  #form_button {
+    padding: 15px 25px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  .icon {
+    height: 35px;
+    width: 35px;
+  }
+
+  .underline {
+    width: 53px;
+  }
+
+  input[type="text"],
+  [type="email"],
+  select,
+  textarea {
+    font-size: 0.875em;
+  }
+}

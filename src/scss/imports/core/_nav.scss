@@ -1,1 +1,119 @@
+/** @format */
+@use "_mixins" as *;
 // css navigator (Menu)
+.nav__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .menu {
+    display: flex;
+
+    li {
+      position: relative;
+      margin: 0 2em;
+
+      a {
+        text-align: center;
+        color: $text-white-cl;
+        text-decoration: none;
+        font-family: "Karla", sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        &:hover {
+          color: $text-yellow-cl;
+
+          &::before {
+            display: block;
+            background: $text-yellow-cl;
+          }
+        }
+        &::before {
+          display: none;
+          content: "";
+          width: 97%;
+          height: 0.1em;
+          position: absolute;
+          bottom: -0.2em;
+          background: $white-cl;
+        }
+      }
+    }
+  }
+  .logo {
+    img {
+      width: 15em;
+    }
+  }
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  width: 2em;
+  cursor: pointer;
+  span {
+    background: #fff;
+    border-radius: 0.2em;
+    height: 0.3em;
+    margin: 0.1em 0;
+    transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    &:nth-of-type(1) {
+      width: 50%;
+    }
+    &:nth-of-type(2) {
+      width: 100%;
+    }
+    &:nth-of-type(3) {
+      width: 75%;
+    }
+  }
+}
+.change {
+  span {
+    &:nth-of-type(1) {
+      transform-origin: bottom;
+      transform: rotatez(45deg) translate(0.2em, 0);
+    }
+    &:nth-of-type(2) {
+      transform-origin: top;
+      transform: rotatez(-45deg);
+    }
+    &:nth-of-type(3) {
+      transform-origin: bottom;
+      width: 50%;
+      transform: translate(0.8em, -0.2em) rotatez(45deg);
+    }
+  }
+}
+
+.nav__mobile {
+  display: none;
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1120px) {
+  .nav__main {
+    .menu {
+      display: none;
+    }
+    .logo {
+      img {
+        width: 10em;
+      }
+    }
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 500px) {
+}

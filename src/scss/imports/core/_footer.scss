@@ -1,5 +1,5 @@
 /** @format */
-
+@use "_variables" as *;
 // css footer
 footer {
   background: $text-black-cl;
@@ -15,13 +15,13 @@ footer {
       &__item {
         display: flex;
         flex-direction: column;
-
+        justify-content: center;
         .title {
           margin-bottom: 2em;
           text-align: center;
           span {
             font-family: "Karla", sans-serif;
-            font-weight: 300;
+            font-weight: 900;
             text-align: center;
             text-transform: uppercase;
             position: relative;
@@ -58,6 +58,8 @@ footer {
         .button {
           text-align: center;
           padding: 1em;
+          width: max(100%, 6em);
+          align-items: center;
         }
       }
     }
@@ -78,5 +80,32 @@ footer {
   &:hover {
     background-color: white;
     color: $black-bg-cl;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  footer {
+    .were {
+      .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 4em;
+        column-gap: 4em;
+      }
+    }
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 500px) {
+  footer {
+    .were {
+      .footer {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: unset;
+        justify-content: center;
+      }
+    }
   }
 }

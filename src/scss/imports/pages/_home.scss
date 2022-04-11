@@ -1,10 +1,11 @@
 /** @format */
-
+@use "../core/_variables" as *;
 // CSS HOMEPAGE
 .hero {
   position: relative;
 
   .hero__wrapper {
+    color: black;
     .hero__wrapper-item {
       width: 100%;
       height: 100vh;
@@ -33,8 +34,9 @@
 
 .welcome {
   background: $text-black-cl;
-  color: $white-cl;
   .container {
+    color: $white-cl;
+
     .wrapper {
       padding: 5em 0;
       .welcome__title {
@@ -174,4 +176,28 @@
 .contact {
   background-image: url("../../src/assets/uni-holder.png");
   height: 22em;
+}
+
+@media only screen and (max-width: 1120px) {
+  .service {
+    .container {
+      .service__wrapper {
+        &-item {
+          gap: 7em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .service {
+    .container {
+      .service__wrapper {
+        &-item {
+          gap: 5em;
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,30 @@
+/** @format */
+
+@font-face {
+  font-family: "pr";
+  src: url("../fonts/Italiana-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "pb";
+  src: url("../fonts/ProximaNova-Bold.woff2") format("woff2"),
+    url("../fonts/ProximaNova-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "peb";
+  src: url("../fonts/ProximaNovaA-Extrabld.woff2") format("woff2"),
+    url("../fonts/ProximaNovaA-Extrabld.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+/* 
+font-family: 'Italiana', serif;
+font-family: 'Karla', sans-serif; */

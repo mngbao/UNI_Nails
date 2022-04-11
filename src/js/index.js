@@ -1,5 +1,14 @@
-function flickity() {
-  $('.hero__wrapper').flickity({
+// import '../scss/style.scss'
+
+function isHomePage() {
+  if (document.location.pathname === '/' ||
+    document.location.pathname.indexOf('index') > -1) {
+    return true;
+  }
+}
+
+const flickity = (item) => {
+  $(item).flickity({
     // options
     cellAlign: 'left',
     wrapAround: true,
@@ -9,7 +18,20 @@ function flickity() {
     selectedAttraction: 0.01,
     friction: 0.15
   });
+
 }
+// function flickity() {
+//   $('.hero__wrapper').flickity({
+//     // options
+//     cellAlign: 'left',
+//     wrapAround: true,
+//     contain: true,
+//     autoPlay: 4000,
+//     pauseAutoPlayOnHover: false,
+//     selectedAttraction: 0.01,
+//     friction: 0.15
+//   });
+// }
 
 
 
@@ -49,14 +71,25 @@ function scrollToWelcome() {
 
   })
 }
+
 window.addEventListener('load', (event) => {
   console.log('page is fully loaded');
 });
 
+
+
+
+
 $(function () {
 
+  $("#nav-placeholder").load("../nav.html");
+  $("#footer-placeholder").load("../footer.html");
 
-  flickity();
-  ServiceCard();
-  scrollToWelcome();
+  if (isHomePage()) {
+    flickity('.hero__wrapper');
+
+    ServiceCard();
+    scrollToWelcome();
+  }
+
 });
