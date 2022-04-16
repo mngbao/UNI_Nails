@@ -2,6 +2,7 @@
 @use "_variables" as *;
 // css header
 header {
+  box-sizing: border-box;
   position: fixed;
   width: 100%;
   overflow: hidden;

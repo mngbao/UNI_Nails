@@ -1,4 +1,14 @@
 // import '../scss/style.scss'
+// import '../../index.html'
+var Scrollbar = window.Scrollbar;
+
+const scrollbar = Scrollbar.init(document.querySelector('#scrollbar'), {
+  damping: 0.07,
+thum
+  
+});
+
+
 
 function isHomePage() {
   if (document.location.pathname === '/' ||
@@ -20,21 +30,20 @@ const flickity = (item) => {
   });
 
 }
-// function flickity() {
-//   $('.hero__wrapper').flickity({
-//     // options
-//     cellAlign: 'left',
-//     wrapAround: true,
-//     contain: true,
-//     autoPlay: 4000,
-//     pauseAutoPlayOnHover: false,
-//     selectedAttraction: 0.01,
-//     friction: 0.15
-//   });
-// }
 
 
+function service() {
+  const header = document.querySelector('header').offsetHeight;
 
+  $('.services__button li').each(function (index, element) {
+    $(element).on("click", function (e) {
+      e.preventDefault();
+      const serviceTab = $('.services__detail .item').eq(index).offset().top - header;
+      scrollbar.scrollTo(0,serviceTab,1200)
+      
+    })
+  })
+}
 function ServiceCard() {
   const Icon = $(".Icon");
 
@@ -56,27 +65,25 @@ function ServiceCard() {
 
 
 function scrollToWelcome() {
-  const header = document.querySelector('header').offsetHeight;
+  const header = document.querySelector('nav').offsetHeight;
   const button = document.querySelector('.hero__button a');
   const className = button.getAttribute('href').replace('#', '.');
-  const welcome = document.querySelector(className);
+  const welcome = document.querySelector(className).offsetTop - header;
+  
+
   $('.hero__button a').on("click", (e) => {
     e.preventDefault();
 
-    console.log("scrolled")
-    window.scrollTo({
-      top: welcome.offsetTop - header,
-      behavior: "smooth"
-    });
+    scrollbar.scrollTo(0,welcome,1200)
 
   })
 }
 
+
+
 window.addEventListener('load', (event) => {
-  console.log('page is fully loaded');
-});
-
-
+  service();
+})
 
 
 
@@ -87,9 +94,11 @@ $(function () {
 
   if (isHomePage()) {
     flickity('.hero__wrapper');
+    window.addEventListener('load', (event) => {
+      ServiceCard();
+      scrollToWelcome();
 
-    ServiceCard();
-    scrollToWelcome();
+    });
   }
 
 });

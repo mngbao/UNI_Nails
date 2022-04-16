@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require('path');
 
@@ -34,12 +35,31 @@ module.exports = {
           },
           "sass-loader"
         ]
+      },
+      {
+        test: /\.html$/,
+        use: ["html-loader"]
+      },
+      {
+        test: /\.(svg|png|jpg|gif)$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[name].[hash][ext]",
+            outputPath: "imgs"
+          }
+        }
       }
     ],
   },
-  plugins: [new MiniCssExtractPlugin({
-    filename: "bundle.css"
-  })],
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "bundle.css"
+    }),
+    new HtmlWebpackPlugin({
+      template: 'index.html'
+    })
+  ],
   resolve: {
     extensions: ['.js', '.scss']
   }

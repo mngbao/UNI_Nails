@@ -1,53 +1,14 @@
-/*!
- * Flickity PACKAGED v2.3.0
- * Touch, responsive, flickable carousels
- *
- * Licensed GPLv3 for open source use
- * or Flickity Commercial License for commercial use
- *
- * https://flickity.metafizzy.co
- * Copyright 2015-2021 Metafizzy
- */
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
 
-/*!
- * Sizzle CSS Selector Engine v2.3.6
- * https://sizzlejs.com/
- *
- * Copyright JS Foundation and other contributors
- * Released under the MIT license
- * https://js.foundation/
- *
- * Date: 2021-02-16
- */
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
 
-/*!
- * Unidragger v2.4.0
- * Draggable base class
- * MIT license
- */
-
-/*!
- * Unipointer v2.4.0
- * base class for doing one thing with pointer event
- * MIT license
- */
-
-/*!
- * imagesLoaded v4.1.4
- * JavaScript is all like "You images are done yet or what?"
- * MIT License
- */
-
-/*!
- * jQuery JavaScript Library v3.6.0
- * https://jquery.com/
- *
- * Includes Sizzle.js
- * https://sizzlejs.com/
- *
- * Copyright OpenJS Foundation and other contributors
- * Released under the MIT license
- * https://jquery.org/license
- *
- * Date: 2021-03-02T17:08Z
- */
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */

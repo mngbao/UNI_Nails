@@ -136,33 +136,12 @@
 }
 
 @media screen and (max-width: 480px) {
-  h1 {
-    font-size: 26px;
-  }
-
-  .underline {
-    width: 68px;
-  }
-
   #form_button {
     padding: 15px 25px;
   }
 }
 
 @media screen and (max-width: 420px) {
-  h1 {
-    font-size: 18px;
-  }
-
-  .icon {
-    height: 35px;
-    width: 35px;
-  }
-
-  .underline {
-    width: 53px;
-  }
-
   input[type="text"],
   [type="email"],
   select,
