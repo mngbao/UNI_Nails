@@ -2,13 +2,18 @@
 @use "../core/_variables" as *;
 // CSS HOMEPAGE
 .hero {
+  z-index: 0;
   position: relative;
+  top: 0;
 
   .hero__wrapper {
     color: black;
+    overflow: hidden;
+
     .hero__wrapper-item {
       width: 100%;
       height: 100vh;
+      overflow: hidden;
       img {
         height: 100%;
         width: 100%;
@@ -22,6 +27,8 @@
     position: absolute;
     left: 50%;
     top: 80%;
+    z-index: 7;
+    cursor: pointer;
     transform: translate(-50%);
     a {
       img {
@@ -153,7 +160,8 @@
       }
       &-info {
         text-align: center;
-        height: 5em;
+        height: 7em;
+        margin: 2em 0;
         .info {
           display: none;
         }

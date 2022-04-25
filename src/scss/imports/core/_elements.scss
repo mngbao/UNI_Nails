@@ -4,7 +4,7 @@
 img {
   max-width: 100%;
 }
-
+//main button style
 .button {
   border: $black-cl 0.1em solid;
   text-transform: uppercase;
@@ -23,6 +23,7 @@ img {
   }
 }
 
+//section parallax image
 .parallax {
   /* Full height */
   height: 100%;
@@ -67,3 +68,5 @@ img {
     }
   }
 }
+
+//loader

@@ -2,13 +2,13 @@
 @use "_variables" as *;
 // css header
 header {
-  box-sizing: border-box;
-  position: fixed;
   width: 100%;
   overflow: hidden;
-  z-index: 10;
+  height: unset;
+  z-index: 5;
   top: 0;
   left: 0;
+  position: fixed;
   .container-fluid {
     width: 100%;
     overflow: hidden;
@@ -16,6 +16,5 @@ header {
 }
 @media only screen and (max-width: 1120px) {
   header {
-    position: absolute;
   }
 }

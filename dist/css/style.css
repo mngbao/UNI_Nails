@@ -107,7 +107,8 @@ section {
   display: block; }
 
 body {
-  line-height: 1; }
+  line-height: 1;
+  position: relative; }
 
 ol,
 ul {
@@ -146,6 +147,9 @@ h2 {
 
 p {
   font-family: "Karla", sans-serif; }
+
+body {
+  overflow: hidden; }
 
 /**
  * /*primary colors
@@ -320,20 +324,17 @@ img {
 /** @format */
 @use "_variables" as *;
 header {
-  box-sizing: border-box;
-  position: fixed;
   width: 100%;
   overflow: hidden;
-  z-index: 10;
+  height: unset;
+  z-index: 5;
   top: 0;
-  left: 0; }
+  left: 0;
+  position: fixed; }
   header .container-fluid {
     width: 100%;
     overflow: hidden; }
 
-@media only screen and (max-width: 1120px) {
-  header {
-    position: absolute; } }
 /** @format */
 @use "_mixins" as *;
 .nav__main {
@@ -347,10 +348,9 @@ header {
       margin: 0 2em; }
       .nav__main .menu li a {
         text-align: center;
-        color: #fff;
-        text-decoration: none;
         font-family: "Karla", sans-serif;
         font-size: 1rem;
+        color: #fff;
         font-weight: 600;
         letter-spacing: 0.2em;
         text-transform: uppercase; }
@@ -367,13 +367,16 @@ header {
           position: absolute;
           bottom: -0.2em;
           background: #fff; }
-  .nav__main .logo img {
-    width: 15em; }
+  .nav__main .logo {
+    z-index: 10; }
+    .nav__main .logo img {
+      width: 15em; }
 
 .hamburger {
   display: none;
   flex-direction: column;
   width: 2em;
+  z-index: 12;
   cursor: pointer; }
   .hamburger span {
     background: #fff;
@@ -386,21 +389,59 @@ header {
     .hamburger span:nth-of-type(2) {
       width: 100%; }
     .hamburger span:nth-of-type(3) {
-      width: 75%; }
+      width: 75%;
+      transform-origin: bottom right;
+      transform: translateX(30%); }
 
 .change span:nth-of-type(1) {
   transform-origin: bottom;
-  transform: rotatez(45deg) translate(0.2em, 0); }
+  transform: rotatez(45deg); }
 .change span:nth-of-type(2) {
   transform-origin: top;
-  transform: rotatez(-45deg); }
+  transform: rotatez(-45deg) translate(0px, -4px);
+  width: 90%; }
 .change span:nth-of-type(3) {
-  transform-origin: bottom;
-  width: 50%;
-  transform: translate(0.8em, -0.2em) rotatez(45deg); }
+  transform: rotatez(45deg) translate(3px, -6px);
+  width: 50%; }
 
 .nav__mobile {
-  display: none; }
+  height: 0;
+  width: 100%;
+  left: 0;
+  position: fixed;
+  opacity: 0;
+  overflow: hidden;
+  background-color: #2b2b28;
+  transition: 0.4s;
+  z-index: 8;
+  display: block; }
+  .nav__mobile ul {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .nav__mobile ul li {
+      margin: 2em 0;
+      text-align: center; }
+      .nav__mobile ul li a {
+        color: #fff;
+        font-family: "Karla", sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase; }
+
+.show {
+  height: 100vh;
+  transition: 0.4s;
+  opacity: 0.95; }
+
+.dark li a {
+  color: #2b2b28; }
+
+.bg-dark span {
+  background-color: #2b2b28;
+  transition: 0.4s; }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /* Large devices (laptops/desktops, 992px and up) */
@@ -432,7 +473,8 @@ footer {
       footer .were .footer__item {
         display: flex;
         flex-direction: column;
-        justify-content: center; }
+        justify-content: center;
+        height: 100%; }
         footer .were .footer__item .title {
           margin-bottom: 2em;
           text-align: center; }
@@ -446,7 +488,7 @@ footer {
               content: "";
               position: absolute;
               width: 100%;
-              height: 0.2em;
+              height: 2px;
               background: #d4af37;
               bottom: -1em;
               left: 0; }
@@ -502,12 +544,16 @@ footer {
 /** @format */
 @use "../core/_variables" as *;
 .hero {
-  position: relative; }
+  z-index: 0;
+  position: relative;
+  top: 0; }
   .hero .hero__wrapper {
-    color: black; }
+    color: black;
+    overflow: hidden; }
     .hero .hero__wrapper .hero__wrapper-item {
       width: 100%;
-      height: 100vh; }
+      height: 100vh;
+      overflow: hidden; }
       .hero .hero__wrapper .hero__wrapper-item img {
         height: 100%;
         width: 100%;
@@ -517,6 +563,8 @@ footer {
     position: absolute;
     left: 50%;
     top: 80%;
+    z-index: 7;
+    cursor: pointer;
     transform: translate(-50%); }
     .hero .hero__button a img {
       width: 3em;
@@ -612,7 +660,8 @@ footer {
           display: block; }
     .service .container .service__wrapper-info {
       text-align: center;
-      height: 5em; }
+      height: 7em;
+      margin: 2em 0; }
       .service .container .service__wrapper-info .info {
         display: none; }
       .service .container .service__wrapper-info .active {

@@ -9,23 +9,30 @@
     <title>Uni Nail and Spa - Best Nail Salon in Kelowna</title>
     <meta name="description" content="" />
     <link rel="stylesheet" href="./dist/css/style.css" />
+    <!-- fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Italiana&family=Karla:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <script
-      type="text/javascript"
-      src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
-    ></script>
   </head>
-  <body>
+  <body id="scrollbar" data-scrollbar>
     <header>
       <div class="container-fluid">
         <div id="nav-placeholder"></div>
       </div>
+      <div class="nav__mobile">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="service.html">Service</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="">Book Now</a></li>
+        </ul>
+      </div>
     </header>
+
     <main class="mainwrapper">
       <section class="hero">
         <div class="hero__wrapper">
@@ -100,7 +107,7 @@
           </div>
         </div>
       </section>
-      <section class="service">
+      <section class="service bright">
         <div class="container">
           <h2 class="service__title">Service</h2>
           <div class="service__wrapper">
@@ -162,8 +169,17 @@
       </section>
     </main>
     <footer id="footer-placeholder"></footer>
+    <!-- Jquery CDN -->
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+    ></script>
+    <!-- Smooth Scrollbar CDN -->
+    <script src="./src/js/lib/smooth-scrollbar.js"></script>
+    <!-- Flickity JS -->
     <script src="src/js/lib/flickity.pkgd.min.js"></script>
     <!-- <script src="dist/bundle.js"></script> -->
+
     <script src="./src/js/index.js"></script>
   </body>
 </html>

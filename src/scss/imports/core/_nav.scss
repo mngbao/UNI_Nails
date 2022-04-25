@@ -1,23 +1,23 @@
 /** @format */
 @use "_mixins" as *;
 // css navigator (Menu)
+
 .nav__main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   .menu {
     display: flex;
-
     li {
       position: relative;
       margin: 0 2em;
-
       a {
         text-align: center;
-        color: $text-white-cl;
-        text-decoration: none;
         font-family: "Karla", sans-serif;
         font-size: 1rem;
+        color: $text-white-cl;
+
         font-weight: 600;
         letter-spacing: 0.2em;
         text-transform: uppercase;
@@ -42,6 +42,7 @@
     }
   }
   .logo {
+    z-index: 10;
     img {
       width: 15em;
     }
@@ -51,6 +52,7 @@
   display: none;
   flex-direction: column;
   width: 2em;
+  z-index: 12;
   cursor: pointer;
   span {
     background: #fff;
@@ -66,6 +68,8 @@
     }
     &:nth-of-type(3) {
       width: 75%;
+      transform-origin: bottom right;
+      transform: translateX(30%);
     }
   }
 }
@@ -73,23 +77,71 @@
   span {
     &:nth-of-type(1) {
       transform-origin: bottom;
-      transform: rotatez(45deg) translate(0.2em, 0);
+      transform: rotatez(45deg);
     }
     &:nth-of-type(2) {
       transform-origin: top;
-      transform: rotatez(-45deg);
+      transform: rotatez(-45deg) translate(0px, -4px);
+      width: 90%;
     }
     &:nth-of-type(3) {
-      transform-origin: bottom;
+      transform: rotatez(45deg) translate(3px, -6px);
       width: 50%;
-      transform: translate(0.8em, -0.2em) rotatez(45deg);
     }
   }
 }
 
 .nav__mobile {
-  display: none;
+  height: 0;
+  width: 100%;
+  left: 0;
+  position: fixed;
+  opacity: 0;
+  overflow: hidden;
+  background-color: $text-black-cl;
+  transition: 0.4s;
+  z-index: 8;
+  display: block;
+  ul {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    li {
+      margin: 2em 0;
+      text-align: center;
+      a {
+        color: $text-white-cl;
+        font-family: "Karla", sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+    }
+  }
 }
+
+.show {
+  height: 100vh;
+  transition: 0.4s;
+  opacity: 0.95;
+}
+.dark {
+  li {
+    a {
+      color: $text-black-cl;
+    }
+  }
+}
+
+.bg-dark {
+  span {
+    background-color: $text-black-cl;
+    transition: 0.4s;
+  }
+}
+
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
 }
