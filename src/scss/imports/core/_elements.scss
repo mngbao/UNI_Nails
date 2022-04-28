@@ -23,6 +23,15 @@ img {
   }
 }
 
+.btn-white {
+  border: $text-white-cl 0.1em solid;
+  color: $text-white-cl;
+  &:hover{
+    background: $white-cl;
+    color: $text-black-cl;
+  }
+}
+
 //section parallax image
 .parallax {
   /* Full height */

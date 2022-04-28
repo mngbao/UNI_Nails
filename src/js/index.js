@@ -33,13 +33,6 @@ scrollbar.addListener(function (status) {
 });
 
 
-function isHomePage() {
-  if (document.location.pathname === '/' ||
-    document.location.pathname.indexOf('index') > -1) {
-    return true;
-  }
-}
-
 const flickity = (item) => {
   $(item).flickity({
     // options
@@ -74,7 +67,7 @@ function hamburger() {
 function headerColor() {
   bright = document.querySelector('.bright').offsetTop;
   hamburger = document.querySelector('.hamburger');
-  menu = document.querySelector('.nav__main .menu ');
+  menu = document.querySelector('#color');
   scrollbar.addListener(function (e) {
 
     if (scrollbar.scrollTop >= bright) {
@@ -172,14 +165,15 @@ $(function () {
   $("#footer-placeholder").load("../footer.html");
 
 
+
   window.addEventListener('load', (event) => {
     service();
     hamburger();
-    headerColor();
   })
-  if (isHomePage()) {
+  if ($("body").data("title") === "home") {
     flickity('.hero__wrapper');
     window.addEventListener('load', (event) => {
+      headerColor();
 
       ServiceCard();
       scrollToWelcome();

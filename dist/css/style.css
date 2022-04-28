@@ -283,6 +283,13 @@ img {
     background: #000;
     color: #fff; }
 
+.btn-white {
+  border: #fff 0.1em solid;
+  color: #fff; }
+  .btn-white:hover {
+    background: #fff;
+    color: #2b2b28; }
+
 .parallax {
   /* Full height */
   height: 100%;
@@ -329,7 +336,6 @@ header {
   height: unset;
   z-index: 5;
   top: 0;
-  left: 0;
   position: fixed; }
   header .container-fluid {
     width: 100%;
@@ -408,6 +414,7 @@ header {
   height: 0;
   width: 100%;
   left: 0;
+  top: 0;
   position: fixed;
   opacity: 0;
   overflow: hidden;
@@ -436,8 +443,9 @@ header {
   transition: 0.4s;
   opacity: 0.95; }
 
-.dark li a {
-  color: #2b2b28; }
+.dark > li > a {
+  color: #2b2b28 !important;
+  transition: 0.4s; }
 
 .bg-dark span {
   background-color: #2b2b28;
@@ -517,13 +525,6 @@ footer {
     padding: 1em; }
     footer .secondary span {
       color: #d4af37; }
-
-.white {
-  border: #fff 0.1em solid;
-  color: white; }
-  .white:hover {
-    background-color: white;
-    color: #000; }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
@@ -619,6 +620,8 @@ footer {
           font-weight: 700; }
 
 .service {
+  background-color: #2b2b28;
+  color: #fff;
   padding: 8em 0; }
   .service .container .service__title {
     text-align: center; }
@@ -644,7 +647,7 @@ footer {
           .service .container .service__wrapper-item li span img {
             width: 100%;
             height: 100%;
-            object-fit: cover; }
+            object-fit: fill; }
         .service .container .service__wrapper-item li p {
           margin-top: 2em;
           position: relative; }
@@ -652,7 +655,7 @@ footer {
             display: none;
             content: "";
             position: absolute;
-            background: #2b2b28;
+            background: #fff;
             width: 100%;
             height: 0.05em;
             bottom: -0.2em; }
@@ -666,14 +669,13 @@ footer {
         display: none; }
       .service .container .service__wrapper-info .active {
         display: block; }
-    .service .container .service__wrapper span {
-      padding: 0.7em 0; }
-      .service .container .service__wrapper span .service__wrapper-button {
-        padding: 0.7em;
-        font-weight: 700; }
+    .service .container .service__wrapper span .service__wrapper-button {
+      padding: 0.7em;
+      font-weight: 700; }
 
 .contact {
-  background-image: url("../../src/assets/uni-holder.png");
+  background: url("../../src/assets/uni-contact.jpg") no-repeat;
+  background-size: cover;
   height: 22em; }
 
 @media only screen and (max-width: 1120px) {

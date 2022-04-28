@@ -95,6 +95,7 @@
   height: 0;
   width: 100%;
   left: 0;
+  top: 0;
   position: fixed;
   opacity: 0;
   overflow: hidden;
@@ -127,12 +128,9 @@
   transition: 0.4s;
   opacity: 0.95;
 }
-.dark {
-  li {
-    a {
-      color: $text-black-cl;
-    }
-  }
+.dark > li > a {
+  color: $text-black-cl !important;
+  transition: 0.4s;
 }
 
 .bg-dark {
