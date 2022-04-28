@@ -161,11 +161,6 @@ function scrollToWelcome() {
 
 $(function () {
 
-  $("#nav-placeholder").load("../../nav.html");
-  $("#footer-placeholder").load("../../footer.html");
-
-
-
   window.addEventListener('load', (event) => {
     service();
     hamburger();
