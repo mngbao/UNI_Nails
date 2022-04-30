@@ -60,13 +60,14 @@
 
 .story {
   background: $text-yellow-cl;
-
+  position: relative;
   .container {
     display: flex;
     padding: 5em 0;
     .story__image {
       flex: 50%;
       margin-right: 2em;
+      height: 40em;
       img {
         width: 100%;
         height: 100%;
@@ -79,6 +80,7 @@
       padding: 2em;
       display: flex;
       flex-direction: column;
+
       &-title {
         font-family: "Italiana", serif;
         font-size: 3rem;
@@ -86,9 +88,7 @@
       }
       &-description {
         margin: 0.5em 0;
-
         font-family: "Karla", sans-serif;
-
         color: $text-black-cl;
       }
       span {
@@ -162,6 +162,8 @@
       }
       &-info {
         text-align: center;
+        font-family: "Karla", sans-serif;
+
         height: 7em;
         margin: 2em 0;
         .info {
@@ -183,10 +185,31 @@
 }
 
 .contact {
-  background: url("../../src/assets/uni-contact.jpg") no-repeat;
+  background: url("../../src/assets/uni-contact.jpg") no-repeat center;
   background-size: cover;
-
   height: 22em;
+  position: relative;
+  &__content {
+    width: 50%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    &-description {
+      font-family: "Karla", sans-serif;
+      color: $text-black-cl;
+    }
+    span {
+      margin-top: 2em;
+      .contact__content-button {
+        padding: 0.7em;
+        font-weight: 700;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 1120px) {
@@ -208,6 +231,16 @@
         &-item {
           gap: 5em;
         }
+      }
+    }
+  }
+  .story {
+    .container {
+      flex-direction: column;
+      .story__image {
+        height: 10em;
+      }
+      img {
       }
     }
   }

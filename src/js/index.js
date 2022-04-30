@@ -19,6 +19,7 @@ Scrollbar.use(ModalPlugin,);
 
 const scrollbar = Scrollbar.init(document.querySelector('#scrollbar'), {
   damping: 0.05,
+  renderByPixels: true,
   syncCallbacks: true,
 
 });
@@ -50,10 +51,12 @@ const flickity = (item) => {
 // Handle Hamburger button
 function hamburger() {
   hamburger = document.querySelector('.nav__main .hamburger');
+  console.log(hamburger)
   nav_mobile = document.querySelector('.nav__mobile');
   header = document.querySelector('header');
   let scroll = true;
   hamburger.addEventListener('click', function () {
+    console.log("clicked")
     hamburger.classList.toggle('change')
     nav_mobile.classList.toggle('show')
     scrollbar.updatePluginOptions('modal', { open: scroll })
@@ -160,16 +163,11 @@ function scrollToWelcome() {
 
 
 $(function () {
-
-  window.addEventListener('load', (event) => {
-    service();
-    hamburger();
-  })
+  service();
+  hamburger();
   if ($("body").data("title") === "home") {
     flickity('.hero__wrapper');
     window.addEventListener('load', (event) => {
-      headerColor();
-
       ServiceCard();
       scrollToWelcome();
     });
