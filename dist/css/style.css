@@ -679,7 +679,7 @@ footer {
 .contact {
   background: url("../../src/assets/uni-contact.jpg") no-repeat center;
   background-size: cover;
-  height: 22em;
+  height: 30em;
   position: relative; }
   .contact__content {
     width: 50%;
@@ -704,15 +704,28 @@ footer {
     gap: 7em; } }
 @media only screen and (max-width: 768px) {
   .service .container .service__wrapper-item {
-    gap: 5em; }
+    gap: 3em; }
+    .service .container .service__wrapper-item li span {
+      width: 7em;
+      height: 7em; }
 
   .story .container {
     flex-direction: column; }
     .story .container .story__image {
       height: 10em; } }
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 500px) {
+  .service .container .service__wrapper-item li span {
+    width: 5em;
+    height: 5em; } }
 /** @format */
 #contact .parallax {
-  background-image: url("../../src/assets/uni-holder.png"); }
+  background: url("../../src/assets/uni-location.jpg");
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
 #contact .info {
   padding: 4em 0;
   margin: 4em; }
@@ -821,6 +834,13 @@ footer {
 #service {
   width: 100%;
   overflow: auto; }
+  #service .parallax {
+    background-image: url("../../src/assets/uni-service.jpg");
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
   #service .services {
     padding: 0 4em; }
     #service .services__button {
@@ -840,5 +860,14 @@ footer {
         background-color: blueviolet; }
       #service .services__detail .item:nth-of-type(4) {
         background-color: blue; }
+
+/** @format */
+#about .parallax {
+  background-image: url("../../src/assets/uni-about.jpg");
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 /*# sourceMappingURL=style.css.map */

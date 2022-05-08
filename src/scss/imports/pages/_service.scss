@@ -1,11 +1,16 @@
 /** @format */
 
-
-
-
 #service {
   width: 100%;
   overflow: auto;
+  .parallax {
+    background-image: url("../../src/assets/uni-service.jpg");
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .services {
     padding: 0 4em;
     &__button {

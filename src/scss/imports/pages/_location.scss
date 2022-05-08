@@ -2,7 +2,13 @@
 
 #contact {
   .parallax {
-    background-image: url("../../src/assets/uni-holder.png");
+    background: url("../../src/assets/uni-location.jpg");
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .info {

@@ -51,12 +51,10 @@ const flickity = (item) => {
 // Handle Hamburger button
 function hamburger() {
   hamburger = document.querySelector('.nav__main .hamburger');
-  console.log(hamburger)
   nav_mobile = document.querySelector('.nav__mobile');
   header = document.querySelector('header');
   let scroll = true;
   hamburger.addEventListener('click', function () {
-    console.log("clicked")
     hamburger.classList.toggle('change')
     nav_mobile.classList.toggle('show')
     scrollbar.updatePluginOptions('modal', { open: scroll })
@@ -125,16 +123,13 @@ function service() {
 
 //Handle Homepage Service Card
 function ServiceCard() {
-  const Icon = $(".Icon");
-
-  Icon.each(function (index, element) {
+  $('.Icon').each(function (index, element) {
     $(element).on("click", function (e) {
-      e.stopPropagation();
+      e.preventDefault();
       $(".info").css({ "display": "none" })
       $(".info").eq(index).css({
         "display": "block"
       })
-
       $(".card p").removeClass("active")
       $(".card p").eq(index).addClass("active");
     })

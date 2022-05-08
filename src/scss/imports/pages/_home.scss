@@ -187,7 +187,7 @@
 .contact {
   background: url("../../src/assets/uni-contact.jpg") no-repeat center;
   background-size: cover;
-  height: 22em;
+  height: 30em;
   position: relative;
   &__content {
     width: 50%;
@@ -229,7 +229,13 @@
     .container {
       .service__wrapper {
         &-item {
-          gap: 5em;
+          gap: 3em;
+          li {
+            span {
+              width: 7em;
+              height: 7em;
+            }
+          }
         }
       }
     }
@@ -240,7 +246,20 @@
       .story__image {
         height: 10em;
       }
-      img {
+    }
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 500px) {
+  .service {
+    .container {
+      .service__wrapper-item {
+        li {
+          span {
+            width: 5em;
+            height: 5em;
+          }
+        }
       }
     }
   }
